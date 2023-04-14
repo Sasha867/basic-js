@@ -17,16 +17,13 @@ function createDreamTeam(members) {
   if (members instanceof Array) {
     let arr = members.filter((el) => typeof el === "string");
     arr = arr.map((el) => el.trim().toUpperCase()).sort();
-    console.log(arr);
     let result = [];
     for (let i = 0; i < arr.length; i++) {
       result.push(arr[i][0]);
     }
-    console.log(result.join("").toLocaleUpperCase());
     return result.join("").toLocaleUpperCase();
-  } else {
-    return false;
   }
+  return false;
 }
 
 module.exports = {
